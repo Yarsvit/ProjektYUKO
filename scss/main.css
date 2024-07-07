@@ -1,0 +1,597 @@
+@font-face {
+  font-family: 'Made Evolve Sans EVO';
+  src: url(../scss/fonts/MADE\ Evolve\ Sans\ Thin\ EVO\ \(PERSONAL\ USE\).otf);
+}
+
+*,
+*::before
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary-dark: #31261a;
+  --color-primary-light: #faf4ea;
+  --color-brand-dark: #465929;
+  --color-brand-light: #819b57;
+}
+body {
+  flex-direction: column;
+  justify-content: center;
+
+  font-size: 16px;
+  margin: 0;
+  height: 100%;
+  line-height: 1;
+}
+
+h1,
+h2,
+h3,
+h6 {
+  font-family: 'Made Evolve Sans EVO', sans-serif;
+}
+
+h4 {
+  color: #d1317c;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+}
+h5 {
+  color: #000;
+  font-weight: 600;
+  font-family: Montserrat;
+  font-size: 15px;
+  text-align: left;
+  width: 70px;
+  height: 20px;
+  top: 500px;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+ul {
+  list-style-type: none;
+  
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  color: #d1317c;
+}
+
+.container {
+  max-width: 1440px;
+
+  margin: 0px;
+  box-sizing: content-box;
+}
+
+/* Header */
+
+.header {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 50;
+  position: fixed;
+}
+
+.header_container {
+  display: flex;
+  min-height: 104px;
+  align-items: center;
+}
+.header_logo {
+  width: 76px;
+  height: 23px;
+  top: 30px;
+  padding-left: 135px;
+}
+
+.header_menu {
+  margin: 0px 0px 0px 250px;
+  width: 845px;
+  display: flex;
+  gap: 64px;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.menu_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu_item:not(:last-child) {
+  margin: 0px 21px 0px 0px;
+}
+
+.menu_link {
+  line-height: 24px;
+}
+
+.main_fon {
+  float: right;
+}
+
+.icon_fon {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 30px;
+  margin-top: -50px;
+  margin-left: 550px;
+}
+
+.hero-container {
+  float: left;
+  justify-content: left;
+  margin-top: 230px;
+  padding-left: 100px;
+}
+
+.singl {
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.singl p {
+  display: inline;
+  margin-left: 20px;
+  position: relative;
+  bottom: 25px;
+}
+
+.hero-title {
+  margin-bottom: 40px;
+  color: #000000;
+  font-family: 'Made Evolve Sans EVO' sans-serif;
+  text-align: left;
+  font-size: 100px;
+  font-weight: 300;
+}
+.slide_1 {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  margin-right: -50%;
+}
+
+.displayed_1 {
+  background-position: right;
+  animation-duration: 3s;
+  animation-name: slidein_1;
+  margin-left: -40px;
+}
+
+@keyframes slidein_1 {
+  from {
+    margin-top: 100%;
+    height: 300%;
+  }
+
+  to {
+    margin-bottom: 300%;
+    height: 100%;
+  }
+}
+.slide_2 {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.displayed_2 {
+  animation-duration: 3s;
+  animation-name: slidein_2;
+}
+
+@keyframes slidein_2 {
+  from {
+    margin-bottom: 300%;
+    height: 300%;
+  }
+
+  to {
+    margin-top: 40%;
+    gheight: 100%;
+  }
+}
+
+.prime {
+  margin-top: 15%;
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.prime-blok {
+  text-align: center;
+  width: 570px;
+  height: 205px;
+  top: 1177px;
+  left: 735px;
+  gap: 0px;
+  opacity: 0px;
+  font-size: 20px;
+  line-height: 50px;
+}
+.prime-title {
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 5px;
+  text-align: left;
+  margin-bottom: 5px;
+  margin-left: 10%;
+
+  color: #d1317c;
+}
+.prime-text {
+  font-family: MADE Evolve Sans EVO;
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 70px;
+  text-align: left;
+  flex-direction: row;
+
+  text-align: left;
+  color: #000000;
+  margin-left: 10%;
+}
+
+.prime-text2 {
+  width: 470px;
+  height: 96px;
+  top: 1286px;
+  left: 735px;
+  gap: 0px;
+  opacity: 0px;
+  margin-left: 10%;
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: marquee 10s linear infinite;
+  padding: 50px;
+}
+
+.video {
+  margin-top: 10px;
+
+  flex-direction: row;
+  display: flex;
+}
+.category {
+  font-family: 'Made Evolve Sans EVO' sans-serif;
+  font-size: 40px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+.arrows {
+  display: flex;
+  align-items: center;
+  width: 470px;
+  height: 96px;
+  top: 1286px;
+  left: 735px;
+  gap: 0px;
+  opacity: 0px;
+
+  float: right;
+  margin-left: 1000px;
+}
+.wrapper {
+  min-height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.main {
+   flex: 1 1 auto;
+}
+.slider {
+  position: absolute;
+  width: 100%;
+}
+
+.slider .slider__item {
+  border: 3px solid #fff;
+  display: block;
+  opacity: 3;
+  text-align: center;
+  transition: 0.2s;
+  margin: 10px 0;
+}
+
+.slider .slider__item .slick-left {
+  opacity: 1;
+}
+.slider .slick-arrow {
+  position: absolute;
+  background: url('../image/Group\ 775.png') 0 0 / 100% no-repeat;
+  cursor: pointer;
+  font-size: 15px;
+  color: #d1317c;
+  width: 25px;
+  margin: 40px;
+  padding: 5px 12px;
+  bottom: 650px;
+}
+
+.slider .slick-prev {
+  right: 60px;
+  border: 0;
+ text-align: center;
+}
+
+.slider .slick-next {
+  right: 0px;
+  transform: rotate(180deg);
+  border: 0;
+}
+.slider .slider__counter {
+  position: relative;
+  color: #fff;
+  font-size: 20px;
+  bottom: -45px;
+  right: 100px;
+}
+
+.album {
+  position: absolute;
+  top: 5px;
+  color: #000000;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 40px;
+  text-align: justify;
+}
+.envelope {
+  position: relative;
+}
+.letter {
+  position: absolute;
+  top: 105px;
+  left: 160px;
+  color: #000000;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 40px;
+  text-align: justify;
+  width: 1170px;
+height: 355px;
+}
+.blok-merch {
+  display: flex;
+  justify-content: space-between;
+  }
+
+.box-merch {
+display: block;
+flex-basis: 50%;
+}
+.category-p {
+  font-family: 'Made Evolve Sans EVO' sans-serif;
+  font-size: 15px; 
+ }
+
+ .category-merch {
+  text-align: center;
+  margin-top: 80px;
+  
+ }
+
+ .product-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+ .product-card__image {
+  
+  width: 370px;
+height: 370px;
+top: 5275px;
+left: 135px;
+gap: 0px;
+border: 1px 0px 0px 0px;
+opacity: 0px;
+ 
+}
+.first-line {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+ margin-top: 20px;
+}
+ .product-card__title {
+  font-family:'Montserrat';
+  font-size: 18px;
+  color: #d1317c;
+  margin-bottom: 8px;
+  
+ }
+ .product-link {
+  font-size: 20px;
+font-weight: bold;
+}
+.product-choice {
+  display: block;
+  
+}
+.product-size {
+  display: flex;
+  font-size: 18px;
+  gap: 50px;
+  }
+.product-color {
+    display: flex;
+    margin-top: 20px;
+    font-size: 18px;
+    gap: 50px;
+    
+    }
+.product-price {
+  margin-top: 20px;
+  text-align: left;
+  font-size: 20px;
+color: #d1317c;   
+}
+   
+.messages {
+  margin-bottom: -5px;
+}
+.yukomail {
+  display: flex;
+  justify-content: space-between;
+}
+.box_slider  {
+  display: inline-block;
+  width: 300px;
+  height: 250px;
+  text-align: left;
+
+}
+.date {
+  font-family: 'Made Evolve Sans EVO' sans-serif;
+  font-size: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  
+}
+.price {
+  font-size: 20px;
+  color: #d1317c;
+}
+.price-link {
+  
+font-size: 20px;
+font-weight: bold;
+}
+.footer {
+  padding: 30px 0;
+}
+.footer-container {
+  min-height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+ 
+  display: flex;
+  gap: 20px;
+}
+.footer-nav {
+display: flex;
+
+  justify-content: space-between;
+  margin-left: 100px;
+
+}
+.nav-start a{
+    display: flex;
+    margin-left: 200px;
+    padding: 0;
+width: 100%;
+justify-content: right;
+  }
+.footer-address {
+  display: flex;
+  justify-content: space-between;
+   
+  }
+.address-managment {
+  font-size: 20px;
+
+}
+.address-media {
+  margin-left: 40px;
+font-size: 20px;
+}
+
+.icon-community {
+  padding: 0 20px 0 20px;
+}
+
+/* 
+ .visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+} */
+
+/* Button */
+.button-main {
+  padding: 16px 32px;
+  color: var(--color-primary-light);
+  background-color: var(--color-brand-light);
+  border: 2px solid var(--color-brand-light);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.button-main:hover {
+  color: var(--color-brand-dark);
+  background-color: transparent;
+  border: 2px solid var(--color-brand-light);
+  border-radius: 8px;
+}
+
+/* Link */
+.link {
+  color: var(--color-primary-light);
+}
+
+.link:hover {
+  color: var(--color-brand-light);
+}
+
+/* Format section */
+/* .formats-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.format-card {
+  padding: 24px;
+}
+
+.formats-title {
+  margin-bottom: 80px;
+}
+
+.format-title {
+  font-size: 24px;
+  font-weight: 600;
+} */
+
+/* .format-text {
+  font-size: 14px;
+  font-weight: 300;
+} */
+/*  */
